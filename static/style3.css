@@ -59,6 +59,11 @@ nav ul li a {
     background: rgba(0,0,0,0.5);
 }
 
+.right {
+    float: right;
+    margin-right: 20px;
+}
+
 .left {
     float: left;
 }

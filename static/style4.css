@@ -63,6 +63,11 @@ nav ul li a {
     float: left;
 }
 
+.right {
+    float: right;
+    margin-right: 20px;
+}
+
 h1 {
     color: black;
     font-size: 30;
