@@ -1,0 +1,23 @@
+#application: rest-app
+#version: 1
+runtime: python27
+api_version: 1
+threadsafe: yes
+
+handlers:
+- url: /favicon\.ico
+  static_files: favicon.ico
+  upload: favicon\.ico
+#added static directory with static files such as css, js and images
+- url: /static
+  static_dir: static
+#static directories should go ABOVE the catch all url (.*)
+- url: .*
+  script: main.app
+ 
+libraries:
+- name: webapp2
+  version: "2.5.2"
+#add jinja2 here, remember in .yaml files, every white space is important
+- name: jinja2
+  version: latest

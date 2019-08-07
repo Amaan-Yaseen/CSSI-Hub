@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSSI Hub</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .hover1:hover{
+            color: black;
+        }
+        .hover2:hover{
+            color: deepskyblue;
+        }
+        .hover3:hover{
+            color: lawngreen;
+        }
+        .hover4:hover{
+            color: mediumpurple;
+        }
+    </style>
+</head>
+<body>
+                    <!-- START OF NAV -->
+    <div id="main_menu">
+        <div class="logo_area">
+            <a href="index.html"><img src="cssi_hub_log.jpg" style="border-radius: 50%; width: 200px; height: 150px;"></a>
+        </div>
+        <br> <br> <br>
+        <div class="inner_main_menu">
+            <ul>
+                <li><a href="index.html" class="hover1">Home</a></li>
+                 <li><a href="index2.html" class="hover2">HTML/CSS</a></li>
+                 <li><a href="index3.html" class="hover3">JavaScript</a></li>
+                 <li><a href="index4.html" class="hover4">Python</a></li>
+            </ul>
+        </div>
+    </div>
+                    <!-- END OF NAV -->
+                    <!-- START OF SILDESHOW -->
+    <br> <br> <br> <br>
+    <div id="container">
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="img_1.jpg" style="height: 600px; width: 1000px;">
+            </div>
+
+            <div class="mySlides fade">
+              <img src="img_2.JPG" style="height: 600px; width: 1000px;">
+            </div>
+
+            <div class="mySlides fade">
+              <img src="img_3.JPG" style="height: 600px; width: 1000px;">
+            </div>
+            <br>
+            <div style="text-align:center">
+              <span class="dot"></span> 
+              <span class="dot"></span> 
+              <span class="dot"></span> 
+            </div>
+        </div>
+    </div>
+                    <!-- END OF SILDESHOW -->
+                    <!-- START OF TEXT -->
+    <br> <br>
+    <div id="text">
+        <h1>What is CSSI Hub?</h1>
+        <br>
+        <p><b>CSSI Hub</b> is a friendly interactive website for beginning computer scientints.<br> We offer general information about programming languages and a range of problem solving questions. </p>
+    </div>
+                    <!-- END OF TEXT -->
+                    <!-- START OF FOOTER -->
+    <div id="footer">
+        <p style="color: crimson;">Follow us on : <br> <a href="https://www.facebook.com/NortheasternElCentro/"><i class="fa fa-facebook-official" style="color: crimson;"></i></a>&emsp;<a href="https://twitter.com/neiuelcentro?lang=en"><i class="fa fa-twitter" style="color: crimson;"></i></a></p>
+    </div>
+                    <!-- END OF FOOTER -->
+</body>
+</html>
+
+ <script>
+        var slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("dot");
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          slideIndex++;
+          if (slideIndex > slides.length) {slideIndex = 1}    
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+          setTimeout(showSlides, 4000);
+        }
+      </script>

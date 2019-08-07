@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSSI Hub</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style3.css">
+    <style>
+        .hover1:hover{
+            border-radius: 6px;
+            background-color: deepskyblue;
+        }
+        .hover2:hover{
+            border-radius: 6px;
+            background-color: mediumpurple;
+        }
+        .hover3:hover{
+            border-radius: 6px;
+            background-color: crimson;
+        }
+        span{
+            color: crimson;
+        }
+        span2{
+            color: lawngreen;
+        }
+        span3{
+            color: deepskyblue;
+        }
+        span4{
+            color: mediumpurple;
+        }
+    </style>
+</head>
+<body>
+                    <!-- START OF NAV -->
+    <nav>
+      <a href="index.html"> <div class="logo"><span>C</span><span2>S</span2><span3>S</span3><span4>I</span4> Hub</div></a>
+      <ul>
+        <li><a href="index2.html" class="hover1">HTML/CSS</a></li>
+        <li><a href="index4.html" class="hover2">Python</a></li>
+        <li><a href="index5.html" class="hover3">About Us</a></li>
+      </ul>
+    </nav>
+                    <!-- END OF NAV -->
+                    <!-- START OF MAIN -->
+    <center>
+        <br> <br> <br> <br> <br> <br>
+    <div id="main">
+        <br>
+         <h1 onclick="myFunction('item0')">Javascript</h1>
+          <p id="item0">Welcome to the sexy world of JavaScript.</p>
+        <img src="https://cdn.mos.cms.futurecdn.net/EzgdmaCQuT84bgDL4fhXZS.jpg" style="height: 200px; width: 400px;">
+         <br>
+        <br>
+        <hr>
+          <h2>Javascript the Biggest coding language</h2>
+          <ul>
+          <li>What is Javascript?</li>
+              <h3 onclick="myFunction('item1')">+</h3>
+              <p id="item1">Javascript is ....</p>
+          <li>write text here</li>
+              <h3 onclick="myFunction('item2')">+</h3>
+              <p id="item2">text here</p>
+          <li>write text here</li>
+              <h3 onclick="myFunction('item3')">+</h3>
+              <p id="item3">text here</p>
+          <li>write text here</li>
+              <h3 onclick="myFunction('item4')">+</h3>
+              <p id="item4">text here</p>
+          </ul>
+          <br>
+        <br>
+        <br>
+        </div>
+        <br> <br> <br>
+    </center>
+                    <!-- END OF MAIN -->
+                    <!-- START OF FOOTER -->
+    <div id="footer">
+        <br> <div class="left">
+        <p style="color: white;">&emsp; &emsp; &emsp; Follow us on : <br>&emsp; &emsp; <a href="https://www.facebook.com/NortheasternElCentro/"><i class="fa fa-facebook-official" style="color: white;"></i></a>&emsp;<a href="https://twitter.com/neiuelcentro?lang=en"><i class="fa fa-twitter" style="color: white;"></i></a></p> </div>
+    </div>
+                    <!-- END OF FOOTER -->
+</body>
+</html>
+<script>
+    function myFunction(name){
+        var T = document.getElementById(name);
+        if (T.style.visibility.toString() === 'hidden' || T.style.visibility === '') {
+            T.style.visibility = 'visible';
+        }
+        else {
+            T.style.visibility = 'hidden';
+        }
+    }
+</script>
