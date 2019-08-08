@@ -10,7 +10,7 @@ nav {
   top: 0;
   left: 0;
   width: 100%;
-  height: 85px;
+  height: 100px;
   padding: 10px 90px;
   box-sizing: border-box;
   background: rgba(0,0,0,0.5);
@@ -45,27 +45,23 @@ nav ul li a {
 
 #main {
     background-color: white;
-    height: 1000px;
+    height: 2850px;
     width: 1000px;
 }
 
 #footer {
-    height: 150px;
     left: 0;
     bottom: 0;
+    height: 150px;
     width: 100%;
     color: white;
     text-align: center;
     background: rgba(0,0,0,0.5);
 }
 
-.right {
-    float: right;
-    margin-right: 20px;
-}
-
 .left {
-    float: left;
+    text-align: left;
+    margin-left: 50px;
 }
 
 h1 {
@@ -74,36 +70,50 @@ h1 {
 }
 
 p {
-    color: white;
+    color: black;
     font-size: 25px;
 }
 
-#item1 {
-    visibility: hidden;
-    color: forestgreen;
-    font-size: 15px;
+table{
+  width: 750px;
+  border-collapse: collapse;
 }
 
-#item2 {
-    visibility: hidden;
-    color: forestgreen;
-    font-size: 15px;
+th {
+  text-align: center;
+  border: 2px solid black;
+  padding: 10px;
+  background-color: #222222;
+  color: #e5e4e2;
 }
 
-#item3 {
-    visibility: hidden;
-    color: forestgreen;
-    font-size: 15px;
+td {
+  font-size: 15px;
+  border: 2px solid black;
+  padding: 10px;
+  background-color:  #e5e4e2;
+  color: #000000;
+  display: table-cell;
+  text-align: left
 }
 
-#item4 {
-    visibility: hidden;
-    color: forestgreen;
-    font-size: 15px;
-}
-
-#item0 {
-    visibility: hidden;
-    color: forestgreen;
+li {
+    color: black;
     font-size: 25px;
+}
+
+#q1 {
+    visibility: hidden;
+}
+
+#q2 {
+    visibility: hidden;
+}
+
+#q3 {
+    visibility: hidden;
+}
+
+.questions:hover {
+    color: lawngreen;
 }

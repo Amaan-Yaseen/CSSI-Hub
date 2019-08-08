@@ -32,16 +32,40 @@ def get_all_comments():
         
 class MainHandler(webapp2.RequestHandler):
     def get(self):
-        results_template = jinja_current_directory.get_template('template/index4.html')
+        user_comment=self.request.get('html')
+        results_template = jinja_current_directory.get_template('template/index.html')
+        self.response.write(results_template.render())
+        
+class MainHandler2(webapp2.RequestHandler):
+    def get(self):
+        user_comment=self.request.get('html')
+        results_template = jinja_current_directory.get_template('template/index2.html')
+        self.response.write(results_template.render())
+        
+class MainHandler3(webapp2.RequestHandler):
+    def get(self):
+        user_comment=self.request.get('html')
+        results_template = jinja_current_directory.get_template('template/index3.html')
         self.response.write(results_template.render())
 
        
         
-class GreetHandler(webapp2.RequestHandler):
-    def post(self):
+class MainHandler4(webapp2.RequestHandler):
+    def get(self):
         #retrieve data from add_comment.html
-        user_comment=self.request.get('comment')
+        user_comment=self.request.get('html')
         results_template = jinja_current_directory.get_template('template/index4.html')
+        
+        #save the data in datastore
+        Greetings(comment=user_comment).put()
+        
+        self.response.write(results_template.render(comment = get_all_comments()))
+        
+class MainHandler5(webapp2.RequestHandler):
+    def get(self):
+        #retrieve data from add_comment.html
+        user_comment=self.request.get('html')
+        results_template = jinja_current_directory.get_template('template/index5.html')
         
         #save the data in datastore
         Greetings(comment=user_comment).put()
@@ -53,5 +77,6 @@ class GreetHandler(webapp2.RequestHandler):
         
         
 app = webapp2.WSGIApplication([
-  ('/', MainHandler), ('/comment', GreetHandler)], debug=True)
+  ('/', MainHandler), ('/html', MainHandler2),('/js', MainHandler3),('/py', MainHandler4), ('/us', MainHandler4),
+], debug=True)
         
